@@ -31,5 +31,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 char	*ft_strdup(const char *s);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
 
 #endif
