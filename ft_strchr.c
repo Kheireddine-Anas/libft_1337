@@ -15,15 +15,17 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
+	char	ca;
 
+	ca = (char)c;
 	str = s;
-	if (c == '\0')
-		return (NULL);
 	while (*str)
 	{
-		if (*str == c)
-			return (str);
+		if (*str == ca)
+			return ((char *)&s);
 		str++;
 	}
+	if (str == ca)
+		return ((char *)&s);
 	return (NULL);
 }
