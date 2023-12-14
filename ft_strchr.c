@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akheired <kheireddine.anas@gmail.com>      +#+  +:+       +#+        */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 23:25:39 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/13 23:25:39 by akheired         ###   ########.fr       */
+/*   Updated: 2023/12/14 17:50:51 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-	char	ca;
+	unsigned char		cc;
+	const unsigned char	*str;
 
-	ca = (char)c;
-	str = s;
+	cc = (unsigned char)c;
+	str = (const unsigned char *)s;
 	while (*str)
 	{
-		if (*str == ca)
-			return ((char *)&s);
+		if (*str == cc)
+			return ((char *)str);
 		str++;
 	}
-	if (str == ca)
-		return ((char *)&s);
-	return (NULL);
+	if (cc == '\0')
+		return ((char *)str);
+	return (0);
 }
