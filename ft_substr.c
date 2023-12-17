@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 16:55:43 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/16 19:08:26 by akheired         ###   ########.fr       */
+/*   Updated: 2023/12/17 15:07:45 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (start >= ft_strlen(s))
-		return ("");
-	str = (char *)malloc(len + 1);
+		return (ft_strdup(""));
+	if (ft_strlen(s) - start > len)
+		str = (char *)malloc(len + 1);
+	else
+		str = (char *)malloc(ft_strlen(s) - start + 1);
 	if (!str)
 		return (NULL);
 	while (len-- > 0 && s[start])
