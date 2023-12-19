@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:33:17 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/19 16:28:53 by akheired         ###   ########.fr       */
+/*   Updated: 2023/12/19 16:32:57 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	l_s = ft_strlen(s1);
 	start = to_right(s1, set);
 	l_str = l_s - (start - str_len(s1, set));
-	str = malloc(sizeof(char) * l_str + 1);
+	str = malloc(sizeof(char) * l_str +1);
 	if (!str)
 		return (NULL);
 	while (str[i])
@@ -76,6 +76,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 		i++;
 	}
-	str[i] = 0;
+	str[i] = '\0';
 	return (ft_substr(str, start, l_str));
 }
