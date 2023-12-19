@@ -6,13 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:33:17 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/19 16:32:57 by akheired         ###   ########.fr       */
+/*   Updated: 2023/12/19 17:58:31 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	to_right(const char *str, const char *set)
+int	to_right(const char *str, const char *set)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -32,50 +32,38 @@ unsigned int	to_right(const char *str, const char *set)
 	return (i);
 }
 
-size_t	str_len(char const *str, char const *set)
+int	str_len(char const *str, char const *set)
 {
-	size_t	l_str;
-	size_t	i;
-	size_t	count;
+	int	l_str;
+	int	i;
 
 	i = 0;
-	count = 0;
 	l_str = ft_strlen(str) - 1;
-	while (set[i] && str[l_str])
+	while (set[i] && l_str > 0)
 	{
 		if (set[i] == str[l_str])
 		{
 			l_str--;
 			i = 0;
-			count++;
 		}
 		else
 			i++;
 	}
-	return (count);
+	return (l_str);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*str;
-	unsigned int	start;
-	size_t			l_str;
+	int				start;
+	int				l_str;
 	size_t			l_s;
-	size_t			i;
 
-	i = 0;
-	l_s = ft_strlen(s1);
-	start = to_right(s1, set);
-	l_str = l_s - (start - str_len(s1, set));
-	str = malloc(sizeof(char) * l_str +1);
-	if (!str)
+	str = (char *)s1;
+	l_s = ft_strlen(str);
+	start = to_right(str, set);
+	l_str = str_len(str, set);
+	if (!str || !set)
 		return (NULL);
-	while (str[i])
-	{
-		str[i] = s1[start];
-		start++;
-		i++;
-	}
-	str[i] = '\0';
-	return (ft_substr(str, start, l_str));
+	return (ft_substr(str, start, (l_str - start) + 1));
 }
