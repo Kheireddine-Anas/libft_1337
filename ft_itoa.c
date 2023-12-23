@@ -37,12 +37,15 @@ char	*ft_itoa(int n)
 	if (!str)
 		return (NULL);
 	*(str + len) = '\0';
-	nbr = (n < 0) ? -n : n;
+	nbr = n;
+	if (n < 0)
+		nbr = -n;
 	while (len--)
 	{
 		*(str + len) = 48 + nbr % 10;
 		nbr /= 10;
 	}
-	*(str) = (n < 0) ? '-' : *(str);
+	if (n < 0)
+		*(str) = '-';
 	return (str);
 }
