@@ -57,10 +57,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char			*str;
 	int				start;
 	int				l_str;
-	size_t			l_s;
 
 	str = (char *)s1;
-	l_s = ft_strlen(str);
 	start = to_right(str, set);
 	l_str = str_len(str, set);
 	if (!str || !set)
