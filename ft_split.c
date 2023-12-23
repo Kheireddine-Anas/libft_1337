@@ -21,7 +21,7 @@ size_t	cwords(char const *str, char c)
 	counter = 0;
 	while (*(str + i))
 	{
-		if(*(str + i) != c)
+		if (*(str + i) != c)
 		{
 			counter++;
 			while (*(str + i) && *(str + i) != c)
