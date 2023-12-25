@@ -25,12 +25,12 @@ t_lst	*creat_node(int len, char *str)
 
 void add_back(t_lst *head,t_lst *node)
 {
-	t_lst *cur;
+	t_lst	*cur;
 
 	cur = head;
 	while (cur->next != NULL) 
-        cur = cur->next;
-    cur->next = node;
+		cur = cur->next;
+	cur->next = node;
 }
 
 void print_lst(t_lst *head)
