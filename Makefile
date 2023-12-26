@@ -39,7 +39,9 @@ SRCS=	ft_atoi.c\
 		ft_tolower.c\
 		ft_toupper.c\
 
-BSRC= ft_lstnew.c
+BSRC=ft_lstnew.c\
+	ft_lstadd_front.c\
+
 
 OBJ		= ${SRCS:.c=.o}
 BOBJ	= ${BSRC:.c=.o}

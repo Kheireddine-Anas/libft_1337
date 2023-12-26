@@ -26,6 +26,7 @@ int	nb_len(int n)
 	}
 	return (len);
 }
+
 char	*ft_itoa(int n)
 {
 	char			*str;
