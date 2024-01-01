@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 11:47:53 by akheired          #+#    #+#             */
-/*   Updated: 2024/01/01 12:25:01 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/01 12:39:59 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		n_node = ft_lstnew(set);
 		if (!n_node)
 		{
-			del(lst->content);
+			del(set);
 			ft_lstclear(&n_lst, (*del));
 			return (n_lst);
 		}
