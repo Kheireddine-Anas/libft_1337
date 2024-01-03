@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:18:35 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/16 15:19:52 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 20:47:58 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	j = 0;
 	if (*needle == 0)
 		return ((char *)haystack);
+	if (!haystack)
+		return (NULL);
 	while (haystack[i] && i < len)
 	{
 		while (haystack[i + j] == needle[j] && haystack[i + j] && i + j < len)

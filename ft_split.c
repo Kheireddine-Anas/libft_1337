@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 12:55:06 by akheired          #+#    #+#             */
-/*   Updated: 2024/01/03 14:37:24 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 18:13:09 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	**ft_split(char const *s, char c)
 	size_t	words;
 	char	**dst;
 
+	if (!s)
+		return (NULL);
 	words = cwords(s, c);
 	dst = malloc(sizeof(char *) * (words + 1));
 	if (!dst)

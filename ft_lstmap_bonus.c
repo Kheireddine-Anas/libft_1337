@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/07 09:20:59 by akheired          #+#    #+#             */
-/*   Updated: 2024/01/03 18:51:09 by akheired         ###   ########.fr       */
+/*   Created: 2024/01/01 11:47:53 by akheired          #+#    #+#             */
+/*   Updated: 2024/01/01 12:39:59 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	t_list	*n_lst;
+	t_list	*n_node;
+	void	*set;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (!lst || !f || !del)
+		return (NULL);
+	n_lst = NULL;
+	while (lst)
+	{
+		set = f(lst->content);
+		n_node = ft_lstnew(set);
+		if (!n_node)
+		{
+			del(set);
+			ft_lstclear(&n_lst, (*del));
+			return (n_lst);
+		}
+		ft_lstadd_back(&n_lst, n_node);
+		lst = lst->next;
+	}
+	return (n_lst);
 }
