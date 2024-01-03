@@ -61,7 +61,7 @@ all: ${NAME}
 clean:
 	${RM} ${OBJ} ${BOBJ}
 
-bonus:	${NAME} ${BOBJ}
+bonus:	${BOBJ}
 		${AR} rcs ${NAME} ${BOBJ}
 
 fclean:	clean

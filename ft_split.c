@@ -6,13 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 12:55:06 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/21 12:55:06 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:37:24 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	cwords(char const *str, char c)
+static size_t	cwords(char const *str, char c)
 {
 	size_t	i;
 	size_t	counter;
@@ -33,7 +33,7 @@ size_t	cwords(char const *str, char c)
 	return (counter);
 }
 
-size_t	word_len(char const *s, char c)
+static size_t	word_len(char const *s, char c)
 {
 	size_t	i;
 
@@ -43,7 +43,7 @@ size_t	word_len(char const *s, char c)
 	return (i);
 }
 
-void	fr_er(char **dst, size_t i)
+static void	fr_er(char **dst, size_t i)
 {
 	while (i > 0)
 	{
@@ -53,7 +53,7 @@ void	fr_er(char **dst, size_t i)
 	free (dst);
 }
 
-char	**spliter(char const *s, char c, char **dst, size_t words)
+static char	**spliter(char const *s, char c, char **dst, size_t words)
 {
 	size_t	i;
 	size_t	j;

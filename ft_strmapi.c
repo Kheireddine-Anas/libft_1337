@@ -6,13 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 18:01:22 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/24 09:45:49 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:37:43 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	c_word(char const *str)
+static size_t	c_word(char const *str)
 {
 	size_t	i;
 

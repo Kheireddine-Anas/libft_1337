@@ -6,13 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/23 13:24:07 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/23 13:24:07 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:40:47 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	nb_len(int n)
+static int	nb_len(int n)
 {
 	int	len;
 

@@ -6,13 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 14:33:17 by akheired          #+#    #+#             */
-/*   Updated: 2023/12/19 17:58:31 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:38:15 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	to_right(const char *str, const char *set)
+static int	to_right(const char *str, const char *set)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -32,7 +32,7 @@ int	to_right(const char *str, const char *set)
 	return (i);
 }
 
-int	str_len(char const *str, char const *set)
+static int	str_len(char const *str, char const *set)
 {
 	int	l_str;
 	int	i;

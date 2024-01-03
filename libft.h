@@ -6,17 +6,17 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:09:19 by akheired          #+#    #+#             */
-/*   Updated: 2024/01/01 11:49:31 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:22:38 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <stdlib.h>
-#include <unistd.h>
-#include <stddef.h>
-#include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stddef.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

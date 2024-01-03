@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 13:11:34 by akheired          #+#    #+#             */
-/*   Updated: 2024/01/01 11:58:43 by akheired         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:40:39 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	hld = *lst;
 	while (hld->next != NULL)
-	{
 		hld = hld->next;
-	}
 	hld->next = new;
 }
