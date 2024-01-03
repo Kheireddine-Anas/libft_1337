@@ -53,7 +53,7 @@ OBJ		= ${SRCS:.c=.o}
 
 BOBJ	= ${BSRC:.c=.o}
 
-${NAME}: ${OBJ}
+${NAME}: ${OBJ} libft.h
 		$(AR) rcs ${NAME} ${OBJ}
 
 all: ${NAME}
@@ -61,7 +61,7 @@ all: ${NAME}
 clean:
 	${RM} ${OBJ} ${BOBJ}
 
-bonus:	${BOBJ}
+bonus:	${BOBJ} libft.h
 		${AR} rcs ${NAME} ${BOBJ}
 
 fclean:	clean
